@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+
+
+</head>
+<body style="background-color:powderblue;">
+
+<!-- <body style="background-image: url('img_girl.jpg');" > -->
+<h2 style="text-align:center">Amount of yearly sependings</h2>
+
+<form action="/predict" method='post' style="text-align:center">
+  <label for="Avatar"><b>Avatar:</b></label><br>
+  <input type="text" id="av" name="av" value="0" style="text-align:center"><br><br>
+  <label for="Avg. Session Length"><b>Avg. Session Length:</b></label><br>
+  <input type="text" id="avglen" name="avglen" value="0" style="text-align:center"><br><br>
+  <label for="Time on App"><b>Time on App:</b></label><br>
+  <input type="text" id="ToApp" name="ToApp" value="0" style="text-align:center"><br><br>
+  <label for="Time on Website"><b>Time on Website:</b></label><br>
+  <input type="text" id="ToWeb" name="ToWeb" value="0" style="text-align:center"><br><br>
+  <label for="Length of Membership"><b>Length of Membership:</b></label><br>
+  <input type="text" id="LenMem" name="LenMem" value="0" style="text-align:center"><br><br>
+  <input type="submit" value="Submit"><br><br>
+
+  <h2> Prdictions:</h2>
+
+  <p font-size: 20px><strong>{{ result }}</strong></p>
+
+</form> 
+
+</body>
+</html>
